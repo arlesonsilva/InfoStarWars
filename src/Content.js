@@ -1,4 +1,4 @@
-import React, { Component } from 'react';	
+import React, { Component } from 'react';
 
 class Content extends Component{
 
@@ -7,14 +7,14 @@ class Content extends Component{
 
 	    this.state = {
 	      hits: [],
-	      isLoading: false
+	      isLoading: false	      
 	    };
 	}
 
-	componentDidMount() {
+	componentWillMount() {
 	    this.setState({ isLoading: true });
-
-	    fetch("https://swapi.co/api/planets/")
+	    
+	    fetch('https://swapi.co/api/planets/')
 	    	.then(response => response.json())
 	  		.then(data => this.setState({ hits: data.results, isLoading: false }));
 	}
@@ -23,14 +23,20 @@ class Content extends Component{
 		const { hits, isLoading } = this.state;
 
 	    if (isLoading) {
-	      return <div> <p>Loading ...</p> </div>;
+	      return <div> <p className="title">Loading...</p> </div>;
 	    }
 
- 		return( 
-			<div>
-				{hits.map(hit =>
-		    		<div key={hit.url}> <a href={hit.name}>{hit.name} </a> </div>
-	        	)}
+ 		return(
+
+			<div className="row">
+				<h2 className="title">Planetas</h2>
+				<div className="col">
+					<ul>
+						{hits.map(hit =>
+				    		<li className="listitem" key={hit.url}> <a href={hit.name}>{hit.name} </a> </li>
+			        	)}
+			        </ul>
+	        	</div>
 			</div>				
 		);
 	}

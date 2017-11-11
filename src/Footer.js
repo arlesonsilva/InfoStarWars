@@ -5,7 +5,8 @@ class Footer extends Component{
  		return( 
 				<footer id="footer">
 						Desenvolvido por 
-						<a href="https://github.com/ArlesonSilva" target="2"> Arleson Silva</a>.						
+						<a href="https://github.com/ArlesonSilva" target="2"> Arleson Silva</a> e 
+						Tiago Maia.						
 				</footer>					
 			 );
 	}

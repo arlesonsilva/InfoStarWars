@@ -10,6 +10,7 @@ class App extends Component{
 	    return (
 	    	<div>
 		    	<Header/>
+		    	<div className="deathstar"></div>
 		    	<Navbar/>
 		    	<Content/>	    				    	
 		    	<Footer/>

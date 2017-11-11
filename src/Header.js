@@ -4,8 +4,8 @@ class Header extends Component{
 	render() {
  		return( 
  				<header>
-				    <h2 id="pageTitle">info<br/>Star Wars</h2>				    
-				</header>				
+				    <h1 id="pageTitle">info<br/>Star Wars</h1>				    			   
+				</header>								
 			);
 	}
 }

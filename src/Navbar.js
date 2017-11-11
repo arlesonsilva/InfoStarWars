@@ -2,15 +2,31 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class Navbar extends Component{
-handleToggle() {
-    $(this).toggleClass("active");
-    $("nav").toggleClass("show");
-};
+
+	constructor() {
+	    super();
+
+	    this.state = {
+	      navbar: null    	     
+	    };
+	}
+
+	mostrarMenu() {
+		$(this).toggleClass("active");
+	    $("nav").toggleClass("show");
+	}
+
+	handleclick = (id) => {
+		if (id === 'https://swapi.co/api/planets/') {
+			console.log("planets")
+		}
+	}	
+
 	render() {
  		return( 
 			<div>
-				<div id="container" onClick={this.handleToggle}>
-					<div id="burger">
+				<div id="container">
+					<div id="burger" onClick={this.mostrarMenu}>
 				    	<div className="bun top"></div>
 				        <div className="filling"></div>
 				        <div className="bun bottom"></div>
@@ -20,22 +36,22 @@ handleToggle() {
 				<nav>
 					<ul>
 					    <li>
-					      <a href="#">Home</a>
+					      <a href="#" onClick={() => this.handleclick("home")}>Home</a>
 					    </li>
 					    <li className="green">
-					      <a href="#">Filmes</a>
+					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/films/")}>Filmes</a>
 					    </li>
 					    <li className="red">
-					      <a href="#">Pessoas</a>
+					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/people/")}>Pessoas</a>
 					    </li>
 					    <li className="yellow">
-					      <a href="#">Planetas</a>
+					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/planets/")}>Planetas</a>
 					    </li>
 					    <li className="purple">
-					      <a href="#">Naves</a>
+					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/starships/")}>Naves</a>
 					    </li>
 				  	</ul>
-				</nav>
+				</nav>				
 			</div>				
 		);
 	}
