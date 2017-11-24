@@ -48,7 +48,7 @@ body {
 }
 
 .deathstar {
-    position: absolute;
+  position: absolute;
 }
 
 .title {
@@ -236,8 +236,8 @@ tr:nth-child(even) {
 /* uma colonas */
 @media (min-width: 320px) {
   .col-1 {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
   }
   .litopnav {
     float: none;    
@@ -247,8 +247,8 @@ tr:nth-child(even) {
 /* duas colonas */
 @media (min-width: 480px) {
   .col-2 {
-      width: 50%;
-      text-align: center;
+    width: 50%;
+    text-align: center;
   }    
   .litopnav {
     float: none;    
@@ -258,8 +258,8 @@ tr:nth-child(even) {
 /* quatro colunas */
 @media (min-width: 768px) {
   .col-4 {
-      width: 25%;
-      text-align: center;
+    width: 25%;
+    text-align: center;
   }
   .col-2 {
     text-align: left;
@@ -299,13 +299,13 @@ tr:nth-child(even) {
 }
 
 #footer a {
-    color: #ffd54e;
-    text-decoration: none;
+  color: #ffd54e;
+  text-decoration: none;
 }
 
 #footer a:hover {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .sample {
@@ -425,6 +425,64 @@ h2 {
   display: none;
 }
 
+.paginacao {
+  font-size: 45px;
+  text-decoration: none;
+  color: #ffd54e;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 50px;
+  margin-right: 70px; 
+  font-family: star_wars;
+}
+
+.paginacao a:hover {
+  color: white;
+}
+
 .ir_para_topo:hover{
   text-decoration:none;
+}
+
+#f-intro {
+  color: #4bd5ee!important;
+}
+
+#form-starwars textarea {
+  resize: none;
+  margin-top: 50px;
+}
+
+#form-starwars input, #form-starwars textarea {
+  width: 50%;
+  display: block;
+  margin-bottom: 0;
+  padding: .25em;
+  border: -0.75em solid rgba(255,213,78,.2);
+  border-radius: .2em;
+  background: #000;
+  color: #ffd54e;
+  transition: border-color .7s ease-out;
+  margin-left: 25%;
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 13.3333px Arial;
+}
+
+.descricao {
+  display: none;  
+  width: 80%;
+  padding: 50px;
+  border: 1px solid #ffd54e;
 }

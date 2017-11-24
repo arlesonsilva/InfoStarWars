@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component{
-
-	constructor() {
-	    super();
-
-	    this.state = {
-	      navbar: null    	     
-	    };
-	}
 
 	mostrarMenu() {
 		$(this).toggleClass("active");
 	    $("nav").toggleClass("show");
 	}
 
-	handleclick = (id) => {
-		if (id === 'https://swapi.co/api/planets/') {
-			console.log("planets")
-		}
-	}	
-
 	render() {
- 		return( 
+ 		return(
 			<div>
 				<div id="container">
 					<div id="burger" onClick={this.mostrarMenu}>
@@ -35,20 +22,20 @@ class Navbar extends Component{
 
 				<nav>
 					<ul>
-					    <li>
-					      <a href="#" onClick={() => this.handleclick("home")}>Home</a>
+					    <li>						      
+					      <Link to="/">Home</Link>
 					    </li>
 					    <li className="green">
-					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/films/")}>Filmes</a>
+					      <Link to="/Filmes">Filmes</Link>
 					    </li>
-					    <li className="red">
-					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/people/")}>Pessoas</a>
+					    <li className="red">						    
+					      <Link to="/Pessoas">Pessoas</Link>
 					    </li>
-					    <li className="yellow">
-					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/planets/")}>Planetas</a>
+					    <li className="yellow">						      
+					      <Link to="/Planetas">Planetas</Link>
 					    </li>
 					    <li className="purple">
-					      <a href="#" onClick={() => this.handleclick("https://swapi.co/api/starships/")}>Naves</a>
+					      <Link to="/Naves">Veicúlos</Link>						      
 					    </li>
 				  	</ul>
 				</nav>				
